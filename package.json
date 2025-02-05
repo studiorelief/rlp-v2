@@ -1,13 +1,13 @@
 {
-  "name": "@finsweet/developer-starter",
+  "name": "@studiorelief/rlp-v2",
   "version": "0.0.0",
-  "description": "Developer starter template for Finsweet projects.",
-  "homepage": "https://github.com/finsweet/developer-starter#readme",
+  "description": "Website - Réinventer le patrimoine by Studio Relief",
+  "homepage": "https://github.com/studiorelief/rlp-v2#readme",
   "license": "ISC",
   "keywords": [],
   "author": {
-    "name": "Finsweet",
-    "url": "https://finsweet.com/"
+    "name": "Studio Relief",
+    "url": "https://studiorelief.fr/"
   },
   "repository": {
     "type": "git",
