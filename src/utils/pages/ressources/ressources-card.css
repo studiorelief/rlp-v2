@@ -1,0 +1,7 @@
+.form_filter-checkbox-field:hover .form_filter-checkbox {
+  background-color: var(--_brand---background--brand) !important;
+}
+
+.form_filter-checkbox-field:hover .form_filter-checkbox.w--redirected-checked {
+  background-color: var(--_brand---background--brand-high) !important;
+}

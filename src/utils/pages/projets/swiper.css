@@ -1,0 +1,9 @@
+.swiper.is-projets,
+.swiper.is-galerie {
+  overflow: visible !important;
+}
+
+.swiper-button-disabled {
+  pointer-events: none;
+  background-color: var(--_brand---background--hover-surface);
+}

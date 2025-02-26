@@ -1,0 +1,14 @@
+[component='card']:hover .card-button-hover {
+  color: var(--_brand---action--hover-text);
+}
+
+[component='card']:hover .button {
+  color: var(--_brand---action--hover-text);
+  text-decoration-color: var(--_brand---action--hover-text);
+}
+
+/* Remove figure from cards */
+[component='card'] figure,
+[component='card'] figure.w-richtext-figure-type-video {
+  display: none;
+}
