@@ -4,15 +4,19 @@ import { openNewTabs } from '$utils/component/openNewTabs';
 import { seeMore } from '$utils/component/seeMore';
 import loadScript from '$utils/global/loadScript';
 import { initMarker } from '$utils/global/marker';
+import { fadeInMenu, handleNavBackground } from '$utils/global/tricks';
 import { svgComponent } from '$utils/global/tricks';
 import { hideTocIfEmpty } from '$utils/pages/actualites/actualitesToc';
 import { copyUrl } from '$utils/pages/actualites/copyURL';
+import { initMap } from '$utils/pages/projets/map/map';
 import { swiperGalerie, swiperPromotions } from '$utils/pages/projets/swiper';
 import { toggleDetails } from '$utils/pages/projets/toggleDetails';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
   /* global */
+
+  handleNavBackground();
 
   // Finsweet Attributes
   Promise.all([
@@ -40,6 +44,13 @@ window.Webflow.push(() => {
   // tricks for link
   openNewTabs();
 
+  // Toc load
+  fadeInMenu();
+
+  if (window.location.pathname === '/') {
+    initMap();
+  }
+
   // projets Slider & toggleDetails
   if (
     window.location.pathname.includes('les-projets') ||
@@ -48,6 +59,7 @@ window.Webflow.push(() => {
     swiperPromotions();
     swiperGalerie();
     toggleDetails();
+    initMap();
   }
 
   if (

@@ -1,5 +1,5 @@
 /* Nav with current Link  */
-.navbar_accordion_item:has(.w--current) .navbar_accordion_header {
+.navbar_accordion_component:has(.w--current) .navbar_accordion_header {
   color: var(--_brand---text--brand);
   /* text-decoration: underline;
   text-underline-offset: 0.5625rem;
@@ -7,6 +7,10 @@
   text-decoration-thickness: 0.125rem; */
 }
 
-.navbar_accordion_header.is-active-accordion .navbar_accordion_arrow-wrapper {
+.navbar_accordion_component:hover .navbar_accordion_arrow-wrapper {
   transform: rotate(180deg);
+}
+
+.navbar_menu-button.w-nav-button.w--open ~ .main-wrapper {
+  opacity: 0;
 }
