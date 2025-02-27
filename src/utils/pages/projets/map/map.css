@@ -1,0 +1,28 @@
+.mapboxgl-map {
+  font: inherit !important;
+}
+
+.mapboxgl-popup-content {
+  border-radius: var(--radius--small) !important;
+  padding: 0rem !important;
+  z-index: 1000 !important;
+}
+
+.projets_map_popup {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.mapboxgl-popup-tip {
+  z-index: 0 !important;
+}
+
+.mapboxgl-popup-close-button span {
+  color: var(--_brand---action--primary) !important;
+  transition: color 0.2s ease-out;
+}
+
+.mapboxgl-popup-close-button:hover span {
+  color: var(--_brand---action--hover-text) !important;
+}
