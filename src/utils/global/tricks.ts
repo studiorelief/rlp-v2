@@ -17,19 +17,6 @@ export function fadeInMenu() {
   }
 }
 
-/* hide elements marked if-empty="hide" when their CMS collection list is empty */
-export function hideIfEmpty() {
-  document.querySelectorAll('[if-empty="hide"]').forEach((element) => {
-    // collection list to test: explicit [if-empty-target] child, else the element itself
-    const target = element.querySelector('[if-empty-target]') ?? element;
-
-    // Webflow renders a .w-dyn-empty block ("No items found.") when the list has no items
-    if (target.querySelector('.w-dyn-empty') !== null) {
-      (element as HTMLElement).style.display = 'none';
-    }
-  });
-}
-
 export function handleNavBackground() {
   const menuButton = document.querySelector('.navbar_menu-button') as HTMLElement;
   const mobileBackground = document.querySelector('.navbar_mobile-background') as HTMLElement;
