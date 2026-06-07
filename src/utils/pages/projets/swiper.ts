@@ -6,6 +6,9 @@ export function swiperPromotions() {
   const swiperContainers = document.querySelectorAll('.swiper.is-projets, swiper.is-galerie');
 
   swiperContainers.forEach((container) => {
+    // skip empty CMS collection lists (Webflow renders .w-dyn-empty, no .swiper-wrapper)
+    if (!container.querySelector('.swiper-wrapper')) return;
+
     new Swiper(container as HTMLElement, {
       loop: false,
       slidesPerView: 3,
@@ -53,6 +56,9 @@ export function swiperGalerie() {
   const swiperContainers = document.querySelectorAll('.swiper.is-galerie');
 
   swiperContainers.forEach((container) => {
+    // skip empty CMS collection lists (Webflow renders .w-dyn-empty, no .swiper-wrapper)
+    if (!container.querySelector('.swiper-wrapper')) return;
+
     new Swiper(container as HTMLElement, {
       loop: false,
       slidesPerView: 'auto',

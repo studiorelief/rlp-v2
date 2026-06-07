@@ -4,7 +4,7 @@ import { openNewTabs } from '$utils/component/openNewTabs';
 import { seeMore } from '$utils/component/seeMore';
 import loadScript from '$utils/global/loadScript';
 import { initMarker } from '$utils/global/marker';
-import { fadeInMenu, handleNavBackground } from '$utils/global/tricks';
+import { fadeInMenu, handleNavBackground, hideIfEmpty } from '$utils/global/tricks';
 import { svgComponent } from '$utils/global/tricks';
 import { hideTocIfEmpty } from '$utils/pages/actualites/actualitesToc';
 import { copyUrl } from '$utils/pages/actualites/copyURL';
@@ -38,6 +38,9 @@ window.Webflow.push(() => {
 
   // svg
   svgComponent();
+
+  // hide if-empty="hide" elements with empty CMS content
+  hideIfEmpty();
 
   // lirePlus
   seeMore();
