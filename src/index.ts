@@ -11,6 +11,7 @@ import { copyUrl } from '$utils/pages/actualites/copyURL';
 import { initMap } from '$utils/pages/projets/map/map';
 import { swiperGalerie, swiperPromotions } from '$utils/pages/projets/swiper';
 import { toggleDetails } from '$utils/pages/projets/toggleDetails';
+import { diagnosticQuote } from '$utils/pages/ressources/diagnosticQuote';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -72,5 +73,10 @@ window.Webflow.push(() => {
   // hide toc if empty
   if (window.location.pathname.includes('actualites')) {
     hideTocIfEmpty();
+  }
+
+  // ressources : affiche la citation uniquement pour "Diagnostic architectural"
+  if (window.location.pathname.includes('ressources')) {
+    diagnosticQuote();
   }
 });
